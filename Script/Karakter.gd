@@ -7,7 +7,7 @@ var speed = 200
 var JumpPower = -600
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("D"):
 		dir = 1
 	else:
@@ -18,4 +18,4 @@ func _process(delta):
 		Velocity.y = JumpPower
 	Velocity.x = speed * dir
 	Velocity.y += Gravity
-	move_and_slide(Velocity, Vector2.UP)
+	Velocity = move_and_slide(Velocity, Vector2.UP)
