@@ -2,15 +2,9 @@ extends KinematicBody2D
 
 var velocity = Vector2.ZERO
 var dir = 0
-<<<<<<< HEAD
 var Gravity = 5
 var speed = 200
-var JumpPower = -600
-=======
-
-const  speed = 128
-const jumpPower = -512
->>>>>>> 944efec2ea11111959a2360a53ed6c7c04c4ffb2
+var JumpPower = -800
 
 
 func _process(_delta):
@@ -22,7 +16,7 @@ func _process(_delta):
 	if Input.is_action_pressed("move_left"):
 		dir = -1
 	if Input.is_action_pressed("jump") and is_on_floor():
-		velocity.y = jumpPower
+		velocity.y = JumpPower
 
 	velocity.x = speed * dir
 	velocity.y += 15
