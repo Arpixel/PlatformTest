@@ -41,12 +41,10 @@ __meta__ = {
 }
 
 [node name="Icon" type="Sprite" parent="Karakter"]
-position = Vector2( 10, -12 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Karakter"]
 visible = false
-position = Vector2( 11, -12.5 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="Karakter"]
